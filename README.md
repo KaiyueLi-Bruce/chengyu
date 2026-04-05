@@ -47,21 +47,3 @@ Idiom data sourced from [chinese-xinhua](https://github.com/pwxcoo/chinese-xinhu
 ## Auto Publish to PyPI
 
 This project is configured to auto-publish to PyPI via GitHub Actions on tags like `v0.1.1`.
-
-Workflow file: `.github/workflows/publish-pypi.yml`
-
-One-time setup (recommended):
-1. In PyPI, open your project settings and add a Trusted Publisher for this GitHub repository.
-2. In GitHub, ensure Actions are enabled for this repository.
-
-Release flow:
-1. Update version in `pyproject.toml`.
-2. Commit and push to `main`.
-3. Create and push a matching tag:
-
-```bash
-git tag v0.1.1
-git push origin v0.1.1
-```
-
-The workflow will build and publish automatically. It also checks that the tag version matches `pyproject.toml`.
